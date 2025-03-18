@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-family: "Rajdhani", "Orbitron", sans-serif;
+}
+
+/* Background Image */
+.bg-image {
+  background-image: url('/view_point.jpeg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+}
+
+/* Blade Runner Theme (Default) */
+.theme-bladerunner {
+  --timer-color: #f59e0b;
+  --timer-glow: rgba(245, 158, 11, 0.7);
+  --timer-secondary-color: #d97706;
+  --message-color: #f59e0b;
+  --message-glow: rgba(245, 158, 11, 0.5);
+  --highlighted-text: #f59e0b;
+  --highlighted-glow: rgba(245, 158, 11, 0.8);
+  --todo-border: rgba(245, 158, 11, 0.3);
+  --todo-bg: rgba(10, 10, 15, 0.6);
+  --todo-completed-bg: rgba(120, 53, 15, 0.1);
+  --todo-text: #f59e0b;
+  --todo-text-completed: rgba(245, 158, 11, 0.5);
+  --todo-checkbox: #f59e0b;
+  --todo-check-icon: #f59e0b;
+  --todo-delete: #f59e0b;
+  --input-bg: rgba(10, 10, 15, 0.8);
+  --input-border: rgba(245, 158, 11, 0.3);
+  --input-text: #f59e0b;
+  --input-placeholder: rgba(245, 158, 11, 0.5);
+  --button-bg: rgba(120, 53, 15, 0.3);
+  --button-hover-bg: rgba(120, 53, 15, 0.5);
+  --button-border: rgba(245, 158, 11, 0.3);
+  --button-text: #f59e0b;
+  font-family: "Rajdhani", monospace;
+}
+
+/* Cyberpunk 2077 Theme */
+.theme-cyberpunk {
+  --timer-color: #06b6d4;
+  --timer-glow: rgba(6, 182, 212, 0.7);
+  --timer-secondary-color: #0891b2;
+  --message-color: #ec4899;
+  --message-glow: rgba(236, 72, 153, 0.5);
+  --highlighted-text: #ec4899;
+  --highlighted-glow: rgba(236, 72, 153, 0.8);
+  --todo-border: rgba(6, 182, 212, 0.3);
+  --todo-bg: rgba(10, 10, 15, 0.6);
+  --todo-completed-bg: rgba(8, 145, 178, 0.1);
+  --todo-text: #06b6d4;
+  --todo-text-completed: rgba(6, 182, 212, 0.5);
+  --todo-checkbox: #ec4899;
+  --todo-check-icon: #ec4899;
+  --todo-delete: #ec4899;
+  --input-bg: rgba(10, 10, 15, 0.8);
+  --input-border: rgba(6, 182, 212, 0.3);
+  --input-text: #06b6d4;
+  --input-placeholder: rgba(6, 182, 212, 0.5);
+  --button-bg: rgba(8, 145, 178, 0.3);
+  --button-hover-bg: rgba(8, 145, 178, 0.5);
+  --button-border: rgba(6, 182, 212, 0.3);
+  --button-text: #06b6d4;
+  font-family: "Orbitron", sans-serif;
+}
+
+/* Matrix Theme */
+.theme-matrix {
+  --timer-color: #22c55e;
+  --timer-glow: rgba(34, 197, 94, 0.7);
+  --timer-secondary-color: #16a34a;
+  --message-color: #22c55e;
+  --message-glow: rgba(34, 197, 94, 0.5);
+  --highlighted-text: #22c55e;
+  --highlighted-glow: rgba(34, 197, 94, 0.8);
+  --todo-border: rgba(34, 197, 94, 0.3);
+  --todo-bg: rgba(10, 10, 15, 0.6);
+  --todo-completed-bg: rgba(22, 163, 74, 0.1);
+  --todo-text: #22c55e;
+  --todo-text-completed: rgba(34, 197, 94, 0.5);
+  --todo-checkbox: #22c55e;
+  --todo-check-icon: #22c55e;
+  --todo-delete: #22c55e;
+  --input-bg: rgba(10, 10, 15, 0.8);
+  --input-border: rgba(34, 197, 94, 0.3);
+  --input-text: #22c55e;
+  --input-placeholder: rgba(34, 197, 94, 0.5);
+  --button-bg: rgba(22, 163, 74, 0.3);
+  --button-hover-bg: rgba(22, 163, 74, 0.5);
+  --button-border: rgba(34, 197, 94, 0.3);
+  --button-text: #22c55e;
+  font-family: "Courier New", monospace;
+}
+
+/* Theme-specific backgrounds */
+.theme-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.theme-bladerunner .theme-background {
+  background-image: linear-gradient(to right, rgba(245, 158, 11, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(245, 158, 11, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.7;
+}
+
+.theme-cyberpunk .theme-background {
+  background-image: linear-gradient(to right, rgba(6, 182, 212, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.7;
+}
+
+.theme-matrix .theme-background {
+  background-image: linear-gradient(0deg, rgba(34, 197, 94, 0.05) 50%, transparent 50%);
+  background-size: 100% 4px;
+  opacity: 0.3;
+}
+
+/* Timer styles */
+.timer-text {
+  color: var(--timer-color);
+  text-shadow: 0 0 10px var(--timer-glow);
+}
+
+.timer-text-secondary {
+  color: var(--timer-secondary-color);
+  text-shadow: 0 0 5px var(--timer-glow);
+  opacity: 0.9;
+}
+
+.timer-message {
+  color: var(--message-color);
+  text-shadow: 0 0 5px var(--message-glow);
+}
+
+.highlighted-text {
+  color: var(--highlighted-text);
+  text-shadow: 0 0 8px var(--highlighted-glow);
+  letter-spacing: 0.05em;
+}
+
+/* Todo list styles */
+.todo-item {
+  border: none;
+  background-color: transparent;
+  backdrop-filter: blur(8px);
+  border-radius: 0.25rem;
+}
+
+.todo-completed {
+  background-color: var(--todo-completed-bg);
+}
+
+.todo-text {
+  color: var(--todo-text);
+}
+
+.todo-text-completed {
+  color: var(--todo-text-completed);
+  text-decoration: line-through;
+}
+
+.todo-checkbox {
+  border: 1px solid var(--todo-checkbox);
+}
+
+.todo-check-icon {
+  color: var(--todo-check-icon);
+}
+
+.todo-delete-btn {
+  color: var(--todo-delete);
+}
+
+.todo-empty-text {
+  color: var(--todo-text-completed);
+}
+
+/* Input styles */
+.todo-input {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--input-text);
+  backdrop-filter: blur(8px);
+}
+
+.todo-input::placeholder {
+  color: var(--input-placeholder);
+}
+
+.todo-input:focus {
+  border-color: var(--input-text);
+  box-shadow: 0 0 0 1px var(--input-border);
+}
+
+/* Button styles */
+.todo-button {
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-border);
+  color: var(--button-text);
+  backdrop-filter: blur(8px);
+}
+
+.todo-button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+/* Scanline effect */
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.scanline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.05), transparent);
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+}
+
+/* Matrix rain effect for Matrix theme */
+.theme-matrix .scanline::after {
+  background: linear-gradient(to bottom, transparent, rgba(34, 197, 94, 0.1), transparent);
+}
+
